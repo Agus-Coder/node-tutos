@@ -17,8 +17,8 @@ readFile('./content/first.txt', 'utf8', (err, result) => {
         writeFile(
             './content/result-async.txt',
             `Here is the result: ${first}, ${second}. Este archivo fue generado por node mediante writeFileAsync`,
-            (err,result)=>{
-                if(err){
+            (err, result) => {
+                if (err) {
                     console.log(err)
                 }
                 console.log(result)
@@ -26,3 +26,5 @@ readFile('./content/first.txt', 'utf8', (err, result) => {
         )
     })
 })
+
+//la lectura y escritura es sincronica porque la funcion escribir se encuentra dentro de la funcion leer. vos cuando lees, terminas escribiendo 
