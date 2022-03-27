@@ -1,17 +1,10 @@
-console.log('hello there, im working in real time')
+// started operating system process
+console.log('first')
+setTimeout(() => {
+  console.log('second')
+}, 0)
+console.log('third')
+// completed and exited operating system process
 
-//npm run dev con nodemon instalado me deja ver cambios en vivo de mi c[odigo ]. Con esto no hace falta que escriba
-//node app.js, sino que el modulo utilizado va a estar mirando los cambios que puedan suceder y actualizartelosolo
-
-//recordar pasos:
-
-//1 node i nodemon
-
-// 2 en json de nuestro proyecto modificar script de la siguiente manera:
-
-// "scripts": {
-//     "start": "node app.js",
-//     "dev": "nodemon app.js"
-//   },
-
-// 3 Ejecutar npm run dev y listo
+//importante pensar porque el orden que obtenes en la consola. por mas que diga de esperar 0 segundos, igual se ejecuta la tercera accion
+//esto es lo mas importante de entender. La segunda accion pasa a estar en segundo plano antes de que se ejecute la tercera
